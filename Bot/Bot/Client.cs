@@ -37,7 +37,7 @@ namespace Bot
                 SocketClient.Log += Log;
                 await RegisterCommandsAsync();
 
-                var token = await File.ReadAllTextAsync("C:/workspace/token.txt"); // /home/julian/GCBot/token.txt
+                var token = await File.ReadAllTextAsync("/home/julian/bot/token.txt"); // /home/julian/GCBot/token.txt
                 await SocketClient.LoginAsync(Discord.TokenType.Bot, token.Trim());
                 await SocketClient.StartAsync();
 
